@@ -1,0 +1,127 @@
+@CHARSET "UTF-8";
+/*
+ * CSS3 of my website
+ * @author : DJEBIEN Tarik
+ * @version : css 3.0
+ * @Browsers : Firefox, Safari, Chrome
+ */
+
+/******** Definition des polices personnalisees */
+@font-face
+{
+	font-family: 'Dayrom';
+	src: url("../polices/dayrom.eot");
+	src: url("../polices/dayrom.eot?#iefix") format('embedded-opentype'),
+		 url("../polices/dayrom.woff") format('woff'),
+		 url("../polices/dayrom.ttf") format('truetype'),
+		 url("../polices/dayrom.svg#Dayrom") format('svg');
+	font-weight: normal;
+	font-style: normal;	
+}
+
+/******** Definition des animations CSS3 */
+@keyframes animatedBackground {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 100% 0;
+    }
+}
+@-webkit-keyframes animatedBackground {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 100% 0;
+    }
+}
+@-ms-keyframes animatedBackground {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 100% 0;
+    }
+}
+@-moz-keyframes animatedBackground {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 100% 0;
+    }
+}
+
+/*
+ * Global Style
+ */
+body {
+	background: url("../img/design/animate_bg.jpg") top no-repeat fixed;
+	background-position: 0px 0px;
+    background-repeat: repeat-x;
+	animation: animatedBackground 50s linear infinite;
+    -ms-animation: animatedBackground 50s linear infinite;
+    -moz-animation: animatedBackground 50s linear infinite;
+    -webkit-animation: animatedBackground 50s linear infinite;
+/* 	-webkit-background-size: cover; */
+/* 	-moz-background-size: cover; */
+/* 	-o-background-size: cover; */
+/* 	background-size: cover; */
+	padding-top: 60px;
+	/* 60px to make the wrapper go all the way to the bottom of the topbar */
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	/* Negative indent footer by it's height */
+	margin: 0 auto;
+	font-family: Dayrom;
+}
+
+/* 
+ * Sections styles
+ */
+section#mainSection {
+ 	margin-top: 60px;
+ 	background: none;
+}
+
+/*
+ * Article styles
+ */
+section#mainSection article
+{
+	background-color: rgba(255,255,255,0.35);
+	border: 1px solid rgba(122,124,125,.07);
+	height: 100%;
+	box-shadow: 6px 6px 6px rgba(122,124,125,.1), -1px -1px 0 rgba(0,0,0,.1) inset;
+	-webkit-box-shadow: 6px 6px 6px rgba(122,124,125,.1), -1px -1px 0 rgba(0,0,0,.1) inset;
+	margin: 2px;
+	padding: 2px;
+}
+
+section#mainSection aside
+{
+	background-color: rgba(255,255,255,0.35);
+	border: 1px solid rgba(122,124,125,.07);
+	border-radius: 0 18px 0 18px;
+	height: 100%;
+	box-shadow: 6px 6px 6px rgba(122,124,125,.1), -1px -1px 0 rgba(0,0,0,.1) inset;
+	-webkit-box-shadow: 6px 6px 6px rgba(122,124,125,.1), -1px -1px 0 rgba(0,0,0,.1) inset;
+	margin: 2px;
+	padding: 2px;
+}
+
+section#mainSection hr
+{
+	border-color: rgba(0,0,0,0.5);
+}
+
+section#mainSection section *.auto
+{
+	overflow: auto;
+}

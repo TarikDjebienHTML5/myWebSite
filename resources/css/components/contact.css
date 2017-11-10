@@ -1,0 +1,86 @@
+@CHARSET "UTF-8";
+/*
+ * CSS3 of my web site
+ * @author : DJEBIEN Tarik
+ * @version : css 3.0
+ * @Object : CSS Style for HTML5 contact component
+ * @Browsers : Firefox, Safari, Chrome
+ */
+ 
+@keyframes animatedQrCode
+{
+	0%   {left:0%; top:0px;}
+	20%  {left:10%; top:0px;}
+	40%  {left:20%; top:0px;}
+	60%  {left:30%; top:0px;}
+	80%  {left:40%; top:0px;}
+	100% {left:50%; top:0px;}
+}
+
+@-webkit-keyframes animatedQrCode /* Safari and Chrome */
+{
+	0%   {left:0%; top:0px;}
+	20%  {left:10%; top:0px;}
+	40%  {left:20%; top:0px;}
+	60%  {left:30%; top:0px;}
+	80%  {left:40%; top:0px;}
+	100% {left:50%; top:0px;}
+}
+
+@-ms-keyframes animatedQrCode
+{
+	0%   {left:0%; top:0px;}
+	20%  {left:10%; top:0px;}
+	40%  {left:20%; top:0px;}
+	60%  {left:30%; top:0px;}
+	80%  {left:40%; top:0px;}
+	100% {left:50%; top:0px;}
+}
+
+@-moz-keyframes animatedQrCode
+{
+	0%   {left:0%; top:0px;}
+	20%  {left:10%; top:0px;}
+	40%  {left:20%; top:0px;}
+	60%  {left:30%; top:0px;}
+	80%  {left:40%; top:0px;}
+	100% {left:50%; top:0px;}
+}
+
+section#mainSection article#myProfil form#qrcodeForm
+{
+	overflow: auto;
+	height: 100%;
+	margin: 2px;
+	padding: 2px;
+}
+
+section#mainSection article#myProfil img#myPhoto
+{
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	background-color: rgba(171,171,171,0.08);
+	overflow: visible;
+	border: solid transparent;
+	margin: auto;
+	box-shadow: inset 1px 1px 0 rgba(0,0,0,.1),inset 0 -1px 0 rgba(0,0,0,.07);
+	-webkit-box-shadow: inset 1px 1px 0 rgba(0,0,0,.1),inset 0 -1px 0 rgba(0,0,0,.07);
+	position: relative;
+	top: -65px;
+}
+
+section#mainSection article#myProfil div#qrcodeImg
+{
+	position:relative;
+	animation:animatedQrCode 5s infinite;
+	animation-direction:alternate;
+}
+
+section#mainSection article#myProfil div#qrcodeImg img
+{
+	background-color: white;
+	overflow: auto;
+	border: solid transparent;
+	box-shadow: inset 1px 1px 0 rgba(0,0,0,.1),inset 0 -1px 0 rgba(0,0,0,.07);
+	-webkit-box-shadow: inset 1px 1px 0 rgba(0,0,0,.1),inset 0 -1px 0 rgba(0,0,0,.07);
+}

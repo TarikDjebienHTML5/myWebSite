@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- HTML5 -->
+<!DOCTYPE html>
+<html lang="en" ng-app>
+
+<!-- HEAD -->
+<head>
+
+<!-- HTML5 meta datas -->
+<meta charset="UTF-8">
+<title>DJEBIEN Tarik - Interests</title>
+<meta name="description" content="Djebien Tarik WebSite">
+<meta name="keywords" content="Djebien, Tarik, MIAGE">
+<meta name="author" content="DJEBIEN Tarik">
+
+	<!-- Responsive design for devices iOS and Android -->
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.O, maximum-scale=1.O, width=device-width" />
+
+<!-- For IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+
+<!-- BootStrap CSS with Responsive Design -->
+<link type="text/css" href="resources/bootstrap/css/bootstrap.css" rel="stylesheet" media="screen" />
+<link type="text/css" href="resources/bootstrap/css/bootstrap-responsive.css" rel="stylesheet" media="screen" />
+
+<!-- Application CSS -->
+<link type="text/css" href="resources/css/mywebsite.css" rel="stylesheet" media="screen" />
+<link type="text/css" href="resources/css/bootstrap_override.css" rel="stylesheet" media="screen" />
+<link type="text/css" href="resources/css/responsive_design.css" rel="stylesheet" media="screen" />
+
+<!-- Application Components CSS -->
+<link type="text/css" href="resources/css/components/footer.css" rel="stylesheet" media="screen" />
+<link type="text/css" href="resources/css/components/header.css" rel="stylesheet" media="screen" />
+<link type="text/css" href="resources/css/components/interests.css" rel="stylesheet" media="screen" />
+<link type="text/css" href="resources/css/components/musicplayer.css" rel="stylesheet" media="screen" />
+
+<!-- For IE6-7 support of CSS property display : inline-block; property -->
+<!--[if lte IE 7]>
+        <link type="text/css" href="/resources/css/ie/mywebsite_ie.css" rel="stylesheet" media="screen" />
+    <![endif]-->
+
+</head>
+
+<!-- HOME PAGE -->
+<body>
+	<!-- Wrapper HTML : Wrap all page content here -->
+	<div id="wrap">
+
+		<!-- HEADER -->
+		<header id="menu" class="navbar navbar-fixed-top">
+			<nav id="menubar" class="navbar-inner">
+				<div class="container-fluid">
+
+					<!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+					<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+						<span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+					</button>
+
+					<!-- Be sure to leave the brand out there if you want it shown -->
+					<a id="projectTitle" class="brand" href="contact.html">Tarik DJEBIEN</a>
+
+					<!-- Everything you want hidden at 940px or less, place within here -->
+					<div class="nav-collapse collapse">
+						<ul class="nav">
+							<li><a id="headerMenuHome" href="index.html"> <i class="icon-home"></i> <span>Home</span>
+							</a></li>
+							<li><a id="headerMenuEmployment" href="employment.html"> <i class="icon-briefcase"></i> <span>Employment</span>
+							</a></li>
+							<li><a id="headerMenuSkills" href="skills.html"> <i class="icon-wrench"></i> <span>Skills</span>
+							</a></li>
+							<li><a id="headerMenuEducation" href="education.html"> <i class="icon-bookmark"></i> <span>Education</span>
+							</a></li>
+							<li><a id="headerMenuInterests" href="interests.html"> <i class="icon-thumbs-up"></i> <span>Interests</span>
+							</a></li>
+							<li><a id="headerMenuContact" href="contact.html"> <i class="icon-envelope"></i> <span>Contact</span>
+							</a></li>
+							<li><a id="headerMenuClock"> <i id="clock" class="icon-time"></i> <span id="currentTime" />
+							</a></li>
+						</ul>
+					</div>
+
+				</div>
+			</nav>
+		</header>
+		<!-- /HEADER -->
+
+		<!-- Main section container page -->
+		<section id="mainSection" class="container-fluid">
+			<article id="myInterests">
+				<img src="resources/img/icon/interests_icon.png" alt="Interests icon" class="thumbnail" />
+
+				<section id="musicPlayerComponentWrapper" class="row-fluid">
+					<!-- Music player component -->
+					<section id="musicPlayerComponent">
+						<div id="divPlayer">
+							<h3>Audio player</h3>
+
+							<audio id="audioPlayer" ontimeupdate="music.update(this)">
+								<source src="resources/audio/tracks/opening_mission.ogg" />
+								<source src="resources/audio/tracks/opening_mission.mp3" />
+							</audio>
+
+							<div>
+								<div id="progressBarControl" class="progress progress-striped active" onclick="music.clickProgress('audioPlayer', this, event)">
+									<div id="progressBar" class="bar" onclick="music.clickProgress('audioPlayer', this, event)">0%</div>
+								</div>
+								<span id="progressTime">0:00</span>
+							</div>
+							<div class="btn-toolbar auto">
+								<span class="btn-group">
+									<button id="playButton" class="btn btn-default" onclick="music.play('audioPlayer', this)">
+										<i class="icon-play"></i>
+									</button>
+									<button id="stopButton" class="btn btn-default" onclick="music.resume('audioPlayer')">
+										<i class="icon-stop"></i>
+									</button>
+									<button id="increaseVolumeButton" class="btn btn-default" onclick="music.volumeDec('audioPlayer')">
+										<i class="icon-volume-down"></i>
+									</button>
+									<button id="decreaseVolumeButton" class="btn btn-default" onclick="music.volumeInc('audioPlayer')">
+										<i class="icon-volume-up"></i>
+									</button>
+								</span>
+								<span class="volume"> <a id="stick1" class="stick1" /> <a id="stick2" class="stick2" /> <a id="stick3" class="stick3" /> <a id="stick4" class="stick4" /> <a
+									id="stick5" class="stick5" /> <a id="stick6" class="stick6" /> <a id="stick7" class="stick7" /> <a id="stick8" class="stick8" /> <a id="stick9" class="stick9" /> <a id="stick10"
+									class="stick10" />
+								</span>
+							</div>
+						</div>
+					</section>
+					<!-- /Music player component -->
+					<button id="displayButton" class="btn btn-default">
+						<i class="icon-resize-small"></i>
+					</button>
+				</section>
+			</article>
+		</section>
+		<!-- /main section container -->
+
+		<!-- FOOTER -->
+		<footer id="myFooter" class="container-fluid">
+			<div class="muted credit">
+				<p id="copyright">© <span id="currentYear"></span> DJEBIEN Tarik</p>
+				<div id="languagesSelection">
+					<a id="englishLanguage" href="#"><img src="resources/img/icon/en_flag.png" alt="en_flag" /></a> <a id="frenchLanguage" href="#"><img src="resources/img/icon/fr_flag.png" alt="fr_flag" /></a>
+				</div>
+			</div>
+		</footer>
+		<!-- /FOOTER -->
+
+	</div>
+
+	<!-- Import javascript placed at the end of the document so the pages load faster -->
+
+	<!-- JQuery -->
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	
+	<!-- AngularJS -->
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular.min.js"></script>
+	
+	<!-- DataTable -->
+	<script type="text/javascript" src="resources/js/dataTables/js/jquery.dataTables.min.js"></script>
+	
+	<!-- qrcode -->
+	<script type="text/javascript" src="resources/js/qrcode/js/jquery.qrcode.min.js"></script>
+
+	<!-- BootStrap -->
+	<script type="text/javascript" src="resources/bootstrap/js/bootstrap.min.js"></script>
+
+	<!-- JS -->
+	<script type="text/javascript" src="resources/js/clock.js" charset="utf-8"></script>
+	<script type="text/javascript" src="resources/js/mywebsite.js" charset="utf-8"></script>
+	<script type="text/javascript" src="resources/js/musicplayer.js" charset="utf-8"></script>
+</body>
+
+
+</html>

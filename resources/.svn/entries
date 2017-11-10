@@ -1,0 +1,53 @@
+10
+
+dir
+6
+https://subversion.assembla.com/svn/mywebsite/trunk/myWebSite/resources
+https://subversion.assembla.com/svn/mywebsite
+
+
+
+2013-07-29T01:38:21.935238Z
+6
+djebien
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+c8c42f76-1297-46f6-afa0-87c2d20ecdae
+
+
+
+
+
+
+0
+
+audio
+dir
+
+bootstrap
+dir
+
+css
+dir
+
+img
+dir
+
+js
+dir
+
+polices
+dir
+
