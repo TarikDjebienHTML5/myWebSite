@@ -5,8 +5,9 @@ node("master"){
     }
 
     stage('Deploy'){
-        withAWS(credentials:'aws'){
-            s3Upload("tarikdjebien.com")
+        withAWS(credentials:'aws', endpointUrl: 'http://tarikdjebien.com.s3-website.eu-west-2.amazonaws.com', region: 'EU (London)') {
+            s3FindFiles('tarikdjebien.com')
         }
+
     }
 }
