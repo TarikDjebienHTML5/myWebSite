@@ -15,7 +15,7 @@ section#mainSection article#myEmployment
 	border: 1px solid;
 }
 
-section#mainSection article#myEmployment img
+section#mainSection article#myEmployment img#myEmployment_icon
 {
 	-webkit-border-radius: 50%;
 	border-radius: 50%;
@@ -29,53 +29,7 @@ section#mainSection article#myEmployment img
 	top: -65px;
 }
 
-section#mainSection article#myEmployment h1,
-section#mainSection article#myEmployment h2,
-section#mainSection article#myEmployment h3,
-section#mainSection article#myEmployment h4,
-section#mainSection article#myEmployment h5,
-section#mainSection article#myEmployment h6
+section#mainSection article#myEmployment div#myEmployment_linkedin
 {
-	text-align: center;
-	margin: 3px;
-	padding: 1px;
-}
-
-section#mainSection article#myEmployment #resume
-{
-	text-align: justify;
-	margin: auto;
-	width: 70%;
-}
-
-section#mainSection article#myEmployment #experiences
-{
-	text-align: center;
-}
-
-section#mainSection article#myEmployment .experience
-{
-	border-radius: 5px;
-	background-color: rgba(255,255,255,0.3);
-	text-align: justify;
-	border: 1px solid transparent;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	width: 85%;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-section#mainSection article#myEmployment .experience hr
-{
-	margin: auto;
-	width: 70%;
-}
-
-section#mainSection article#myEmployment .mission
-{
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 10px;
-	padding: 5px;
+    margin : 12px;
 }
