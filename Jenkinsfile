@@ -5,7 +5,7 @@ node("master"){
     }
 
     stage('Deploy'){
-        withAWS("aws"){
+        withAWS(credentials:'aws'){
             s3Upload("tarikdjebien.com")
         }
     }
