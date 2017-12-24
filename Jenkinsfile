@@ -1,5 +1,8 @@
 node("master"){
 
+    properties([buildDiscarder(logRotator(numToKeepStr: '2'))])
+
+
     stage('SCM') {
         checkout scm
     }
