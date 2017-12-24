@@ -1,10 +1,10 @@
-pipeline {
-  agent any
-  stages {
+node("master"){
+
     stage('SCM') {
-      steps {
-        git(url: 'https://github.com/TarikDjebienHTML5/myWebSite.git', branch: 'master', changelog: true, credentialsId: 'TarikDjebien')
-      }
+        checkout scm
     }
-  }
+
+    stage('Deploy'){
+        s3Upload("tarikdjebien.com")
+    }
 }
