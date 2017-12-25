@@ -14,7 +14,7 @@
 	<meta name="author" content="DJEBIEN Tarik">
 
 	<!-- Responsive design for devices iOS and Android -->
-	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.O, maximum-scale=1.O, width=device-width" />
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, width=device-width" />
 
 	<!-- For IE6-8 support of HTML5 elements -->
 	<!--[if lt IE 9]>
@@ -79,9 +79,9 @@
 								</a>
 							</li>
 							<li>
-								<a id="headerMenuSkills" href="skills.html">
+								<a id="headerMenuSkills" href="bio.html">
 									<i class="icon-wrench"></i>
-									<span>Skills</span>
+									<span>Life</span>
 								</a>
 							</li>
 							<li>
@@ -102,13 +102,8 @@
 									<span>Contact</span>
 								</a>
 							</li>
-							<li>
-								<a id="headerMenuClock">
-									<i id="clock" class="icon-time"></i>
-									<span id="currentTime" />
-								</a>
-							</li>
-						</ul>
+                            <li><a id="headerMenuClock"><i id="clock" class="icon-time"></i><span id="currentTime" /></a></li>
+                        </ul>
 					</div>
 					
 				</div>
@@ -126,6 +121,7 @@
 					<li data-target="#myCarousel" data-slide-to="1"></li>
 					<li data-target="#myCarousel" data-slide-to="2"></li>
 					<li data-target="#myCarousel" data-slide-to="3"></li>
+                    <li data-target="#myCarousel" data-slide-to="4"></li>
 				</ol>
 				<!-- Wrapper for slides -->
 				<div class="carousel-inner">
@@ -137,10 +133,10 @@
 						</div>
 					</div>
 					<div class="item">
-						<img src="resources/img/coding_together.jpg" alt="Coding together" />
+						<img src="resources/img/maths_bg.jpg" alt="Master degree" />
 						<div class="carousel-caption">
 							<h3>Education</h3>
-							<p>education</p>
+							<p>My skills</p>
 						</div>
 					</div>
 					<div class="item">
@@ -151,12 +147,19 @@
 						</div>
 					</div>
 					<div class="item">
-						<img src="resources/img/binary_tunnel_hd.jpg" alt="Binary tunnel" />
+						<img src="resources/img/life_bg.jpg" alt="Istanbul bosphore draw" />
 						<div class="carousel-caption">
-							<h3>Skills</h3>
-							<p>My skills</p>
+							<h3>Bio</h3>
+							<p>My life</p>
 						</div>
 					</div>
+                    <div class="item">
+                        <img src="resources/img/binary_tunnel_hd.jpg" alt="Binary tunnel" />
+                        <div class="carousel-caption">
+                            <h3>Employment</h3>
+                            <p>My Career and our business</p>
+                        </div>
+                    </div>
 				</div>
 				<a class="carousel-control left" data-slide="prev" href="#myCarousel">&lsaquo;</a> <a class="carousel-control right" data-slide="next" href="#myCarousel">&rsaquo;</a>
 			</div>
@@ -170,7 +173,7 @@
 		<!-- FOOTER -->
 		<footer id="myFooter" class="container-fluid">
 			<div class="muted credit">
-				<p id="copyright">© <span id="currentYear"></span> DJEBIEN Tarik</p>
+				<p id="copyright">© <span id="currentYear"></span> - Author : DJEBIEN Tarik</p>
 				<div id="languagesSelection">
 					<a id="englishLanguage" href="#"><img src="resources/img/icon/en_flag.png" alt="en_flag" /></a>
 					<a id="frenchLanguage" href="#"><img src="resources/img/icon/fr_flag.png" alt="fr_flag" /></a>
@@ -197,7 +200,13 @@
 
 	<!-- BootStrap -->
 	<script type="text/javascript" src="resources/bootstrap/js/bootstrap.min.js"></script>
-	
+
+    <!-- Diagram -->
+    <script type="text/javascript" src="resources/js/diagram/webfont.js"></script>
+    <script type="text/javascript" src="resources/js/diagram/snap.svg-min.js"></script>
+    <script type="text/javascript" src="resources/js/diagram/underscore-min.js"></script>
+    <script type="text/javascript" src="resources/js/diagram/sequence-diagram-min.js"></script>
+
 	<!-- JS -->
 	<script type="text/javascript" src="resources/js/home.js" charset="utf-8"></script>
 	<script type="text/javascript" src="resources/js/clock.js" charset="utf-8"></script>

@@ -20,21 +20,10 @@
 	border-radius: 4px 4px 0px 0px;
 }
  
-#musicPlayerComponent div#divPlayer {
+#musicPlayerComponent div#divPlayer, #videoPlayerComponentWrapper iframe#divYoutubePlayer {
 	padding: 20px;
 	margin: 15px;
 	
-}
-
-#musicPlayerComponent #divPlayer h3 {
-	font-size: 17px;
-	line-height: 30px;
-	margin: 0;
-	padding: 0;
-	margin-bottom: 25px;
-	border-bottom: #000 1px solid;
-	color: black;
-	text-shadow: 1px 2px 1.4px rgba(0,0,0,0.6);
 }
 
 #musicPlayerComponent #divPlayer button {

@@ -35,6 +35,7 @@ var music = {
 			    	}
 			    });
 			});
+			$('#displayButton').click();
 		},
 		
 		/* Play the music

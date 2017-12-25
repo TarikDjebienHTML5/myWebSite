@@ -14,15 +14,14 @@
 <meta name="author" content="DJEBIEN Tarik">
 
 	<!-- Responsive design for devices iOS and Android -->
-<meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.O, maximum-scale=1.O, width=device-width" />
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, width=device-width" />
 
 <!-- For IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 
-
-<!-- BootStrap CSS with Responsive Design -->
+    <!-- BootStrap CSS with Responsive Design -->
 <link type="text/css" href="resources/bootstrap/css/bootstrap.css" rel="stylesheet" media="screen" />
 <link type="text/css" href="resources/bootstrap/css/bootstrap-responsive.css" rel="stylesheet" media="screen" />
 
@@ -60,7 +59,7 @@
 					</button>
 
 					<!-- Be sure to leave the brand out there if you want it shown -->
-					<a id="projectTitle" class="brand" href="contact.html">Tarik DJEBIEN</a>
+					<a id="projectTitle" class="brand" href="contact.html">Interests</a>
 
 					<!-- Everything you want hidden at 940px or less, place within here -->
 					<div class="nav-collapse collapse">
@@ -69,7 +68,7 @@
 							</a></li>
 							<li><a id="headerMenuEmployment" href="employment.html"> <i class="icon-briefcase"></i> <span>Employment</span>
 							</a></li>
-							<li><a id="headerMenuSkills" href="skills.html"> <i class="icon-wrench"></i> <span>Skills</span>
+							<li><a id="headerMenuSkills" href="bio.html"> <i class="icon-wrench"></i> <span>Life</span>
 							</a></li>
 							<li><a id="headerMenuEducation" href="education.html"> <i class="icon-bookmark"></i> <span>Education</span>
 							</a></li>
@@ -77,8 +76,7 @@
 							</a></li>
 							<li><a id="headerMenuContact" href="contact.html"> <i class="icon-envelope"></i> <span>Contact</span>
 							</a></li>
-							<li><a id="headerMenuClock"> <i id="clock" class="icon-time"></i> <span id="currentTime" />
-							</a></li>
+                            <li><a id="headerMenuClock"><i id="clock" class="icon-time"></i><span id="currentTime" /></a></li>
 						</ul>
 					</div>
 
@@ -90,7 +88,27 @@
 		<!-- Main section container page -->
 		<section id="mainSection" class="container-fluid">
 			<article id="myInterests">
-				<img src="resources/img/icon/interests_icon.png" alt="Interests icon" class="thumbnail" />
+
+                <section id="videoPlayerComponentWrapper" class="row-fluid">
+                    <div class="divYoutubePlayer">
+                        <iframe src="https://www.youtube.com/embed/x2OenRyN8_E?rel=0&amp;showinfo=0"
+                                width="100%"
+                                height="100%"
+                                frameborder="0"
+                                gesture="media"
+                                allow="encrypted-media"
+                                allowfullscreen class="span6">
+                        </iframe>
+                        <iframe src="https://www.youtube.com/embed/Tr7o2I0BKAE?rel=0&amp;showinfo=0"
+                                width="100%"
+                                height="100%"
+                                frameborder="0"
+                                gesture="media"
+                                allow="encrypted-media"
+                                allowfullscreen class="span6">
+                        </iframe>
+                    </div>
+                </section>
 
 				<section id="musicPlayerComponentWrapper" class="row-fluid">
 					<!-- Music player component -->
@@ -101,6 +119,7 @@
 							<audio id="audioPlayer" ontimeupdate="music.update(this)">
 								<source src="resources/audio/tracks/opening_mission.ogg" />
 								<source src="resources/audio/tracks/opening_mission.mp3" />
+								Your browser does not support the audio element.
 							</audio>
 
 							<div>
@@ -143,8 +162,8 @@
 		<!-- FOOTER -->
 		<footer id="myFooter" class="container-fluid">
 			<div class="muted credit">
-				<p id="copyright">© <span id="currentYear"></span> DJEBIEN Tarik</p>
-				<div id="languagesSelection">
+                <p id="copyright">© <span id="currentYear"></span> - Author : DJEBIEN Tarik</p>
+                <div id="languagesSelection">
 					<a id="englishLanguage" href="#"><img src="resources/img/icon/en_flag.png" alt="en_flag" /></a> <a id="frenchLanguage" href="#"><img src="resources/img/icon/fr_flag.png" alt="fr_flag" /></a>
 				</div>
 			</div>
@@ -169,6 +188,12 @@
 
 	<!-- BootStrap -->
 	<script type="text/javascript" src="resources/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Diagram -->
+    <script type="text/javascript" src="resources/js/diagram/webfont.js"></script>
+    <script type="text/javascript" src="resources/js/diagram/snap.svg-min.js"></script>
+    <script type="text/javascript" src="resources/js/diagram/underscore-min.js"></script>
+    <script type="text/javascript" src="resources/js/diagram/sequence-diagram-min.js"></script>
 
 	<!-- JS -->
 	<script type="text/javascript" src="resources/js/clock.js" charset="utf-8"></script>

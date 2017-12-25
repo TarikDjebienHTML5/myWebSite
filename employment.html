@@ -14,7 +14,7 @@
 	<meta name="author" content="DJEBIEN Tarik">
 
 	<!-- Responsive design for devices iOS and Android -->
-	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.O, maximum-scale=1.O, width=device-width" />
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, width=device-width" />
 
 	<!-- For IE6-8 support of HTML5 elements -->
 	<!--[if lt IE 9]>
@@ -62,7 +62,7 @@
 					</button>
 
 					<!-- Be sure to leave the brand out there if you want it shown -->
-					<a id="projectTitle" class="brand" href="contact.html">Tarik DJEBIEN</a>
+					<a id="projectTitle" class="brand" href="contact.html">Business</a>
 
 					<!-- Everything you want hidden at 940px or less, place within here -->
 					<div class="nav-collapse collapse">
@@ -80,9 +80,9 @@
 								</a>
 							</li>
 							<li>
-								<a id="headerMenuSkills" href="skills.html">
+								<a id="headerMenuSkills" href="bio.html">
 									<i class="icon-wrench"></i>
-									<span>Skills</span>
+									<span>Life</span>
 								</a>
 							</li>
 							<li>
@@ -103,13 +103,8 @@
 									<span>Contact</span>
 								</a>
 							</li>
-							<li>
-								<a id="headerMenuClock">
-									<i class="icon-time"></i>
-									<span id="currentTime" />
-								</a>
-							</li>
-						</ul>
+                            <li><a id="headerMenuClock"><i id="clock" class="icon-time"></i><span id="currentTime" /></a></li>
+                        </ul>
 					</div>
 					
 				</div>
@@ -138,8 +133,8 @@
 		<!-- FOOTER -->
 		<footer id="myFooter" class="container-fluid">
 			<div class="muted credit">
-				<p id="copyright">© <span id="currentYear"></span> DJEBIEN Tarik</p>
-				<div id="languagesSelection">
+                <p id="copyright">© <span id="currentYear"></span> - Author : DJEBIEN Tarik</p>
+                <div id="languagesSelection">
 					<a id="englishLanguage" href="#"><img src="resources/img/icon/en_flag.png" alt="en_flag" /></a>
 					<a id="frenchLanguage" href="#"><img src="resources/img/icon/fr_flag.png" alt="fr_flag" /></a>
 				</div>
@@ -168,10 +163,17 @@
 
 	<!-- LinkedIn -->
 	<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
-	
+
+    <!-- Diagram -->
+    <script type="text/javascript" src="resources/js/diagram/webfont.js"></script>
+    <script type="text/javascript" src="resources/js/diagram/snap.svg-min.js"></script>
+    <script type="text/javascript" src="resources/js/diagram/underscore-min.js"></script>
+    <script type="text/javascript" src="resources/js/diagram/sequence-diagram-min.js"></script>
+
 	<!-- JS -->
 	<script type="text/javascript" src="resources/js/clock.js" charset="utf-8"></script>
 	<script type="text/javascript" src="resources/js/mywebsite.js" charset="utf-8"></script>
+    <script type="text/javascript" src="resources/js/diagram.js" charset="utf-8"></script>
 </body>
 
 
