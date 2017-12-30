@@ -35,8 +35,9 @@
 	<link type="text/css" href="resources/css/components/footer.css" rel="stylesheet" media="screen" />
 	<link type="text/css" href="resources/css/components/header.css" rel="stylesheet" media="screen" />
 	<link type="text/css" href="resources/css/components/contact.css" rel="stylesheet" media="screen" />
-	
-	<!-- For IE6-7 support of CSS property display : inline-block; property -->
+    <link type="text/css" href="resources/css/components/musicplayer.css" rel="stylesheet" media="screen" />
+
+    <!-- For IE6-7 support of CSS property display : inline-block; property -->
 	<!--[if lte IE 7]>
         <link type="text/css" href="/resources/css/ie/mywebsite_ie.css" rel="stylesheet" media="screen" />
     <![endif]-->
@@ -81,7 +82,7 @@
 							</li>
 							<li>
 								<a id="headerMenuSkills" href="bio.html">
-									<i class="icon-wrench"></i>
+									<i class="icon-user"></i>
 									<span>Life</span>
 								</a>
 							</li>
@@ -119,41 +120,91 @@
 
 				<form id="qrcodeForm" class="form-horizontal">
 
+                    <fieldset>
+                    <legend>Special Thanks to :</legend>
+                    <div class="control-group">
+                        <label class="control-label" for="subject">First Name :</label>
+                        <div class="controls">
+                            <input id="firstname" type="text" ng-model="firstname" placeholder="Enter your first name here" autofocus />
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="subject">Last Name :</label>
+                        <div class="controls">
+                            <input id="lastname" type="text" ng-model="lastname" placeholder="Enter your last name here" />
+                        </div>
+                    </div>
 					<div class="control-group">
-						<label class="control-label" for="subject">Name :</label>
+						<label class="control-label" for="subject">Subject :</label>
 						<div class="controls">
-							<input id="subject" type="text" ng-model="subject" placeholder="Enter your name here" />
+							<input id="subject" type="text" ng-model="subject" placeholder="Enter object of your mail here" />
 						</div>
 					</div>
 					<div class="control-group">
 						<label class="control-label" for="body">Message :</label>
 						<div class="controls">
-							<textarea id="body" ng-model="body" placeholder="Enter your message here"></textarea>
-						</div>
-					</div>
-					<div class="control-group">
-						<label class="control-label" for="subjectPreview">Objet :</label>
-						<div class="controls">
-							<p id="subjectPreview">{{subject}}</p>
-						</div>
-					</div>
-					<div class="control-group">
-						<label class="control-label" for="bodyPreview">Mail content :</label>
-						<div class="controls">
-							<p id="bodyPreview">{{body}}</p>
+							<textarea id="body" rows="6" ng-model="body" placeholder="Special Thanks to {{firstname}} {{lastname}} ..."></textarea>
+                            <span class="help-block">Prepare your Qrcode mobile app and</span>
 						</div>
 					</div>
 					<div class="control-group">
 						<div class="controls">
-							<button id="sendEmail" type="button" class="btn btn-default btn-lg">
-								<i class="icon-envelope"></i> <span>Send email with QrCode</span>
+							<button id="sendEmail" type="button" class="btn btn-default btn-large">
+								<i class="icon-envelope"></i> <span>Catch Me If You Can</span>
 							</button>
 						</div>
 					</div>
+                    </fieldset>
 				</form>
 				<div id="qrcodeImg"/>
+
 			</article>
 		</section>
+
+        <section id="musicPlayerComponentWrapper" class="row-fluid">
+            <!-- Music player component -->
+            <section id="musicPlayerComponent">
+                <div id="divPlayer">
+                    <h3>Audio player</h3>
+
+                    <audio id="audioPlayer" ontimeupdate="music.update(this)" autoplay>
+                        <source src="resources/audio/tracks/Chrono_Trigger.mp3" />
+                        Your browser does not support the audio element.
+                    </audio>
+
+                    <div>
+                        <div id="progressBarControl" class="progress progress-striped active" onclick="music.clickProgress('audioPlayer', this, event)">
+                            <div id="progressBar" class="bar" onclick="music.clickProgress('audioPlayer', this, event)">0%</div>
+                        </div>
+                        <span id="progressTime">0:00</span>
+                    </div>
+                    <div class="btn-toolbar auto">
+								<span class="btn-group">
+									<button id="playButton" class="btn btn-default" onclick="music.play('audioPlayer', this)">
+										<i class="icon-play"></i>
+									</button>
+									<button id="stopButton" class="btn btn-default" onclick="music.resume('audioPlayer')">
+										<i class="icon-stop"></i>
+									</button>
+									<button id="increaseVolumeButton" class="btn btn-default" onclick="music.volumeDec('audioPlayer')">
+										<i class="icon-volume-down"></i>
+									</button>
+									<button id="decreaseVolumeButton" class="btn btn-default" onclick="music.volumeInc('audioPlayer')">
+										<i class="icon-volume-up"></i>
+									</button>
+								</span>
+                        <span class="volume"> <a id="stick1" class="stick1" /> <a id="stick2" class="stick2" /> <a id="stick3" class="stick3" /> <a id="stick4" class="stick4" /> <a
+                                id="stick5" class="stick5" /> <a id="stick6" class="stick6" /> <a id="stick7" class="stick7" /> <a id="stick8" class="stick8" /> <a id="stick9" class="stick9" /> <a id="stick10"
+                                                                                                                                                                                                     class="stick10" />
+								</span>
+                    </div>
+                </div>
+            </section>
+            <!-- /Music player component -->
+            <button id="displayButton" class="btn btn-default">
+                <i class="icon-resize-small"></i>
+            </button>
+        </section>
 		<!-- /main section container -->
 		
 		<!-- FOOTER -->
@@ -190,6 +241,7 @@
 	<!-- JS -->
 	<script type="text/javascript" src="resources/js/clock.js" charset="utf-8"></script>
 	<script type="text/javascript" src="resources/js/mywebsite.js" charset="utf-8"></script>
+    <script type="text/javascript" src="resources/js/musicplayer.js" charset="utf-8"></script>
 </body>
 
 
