@@ -88,6 +88,6 @@ section#mainSection article#myProfil div#qrcodeImg img
 section#mainSection article#myProfil legend, label
 {
 	text-align: center;
-	font-family: Snell Roundhand, cursive, sans-serif;
+	font-family: Snell Roundhand, cursive, AlexBrush, sans-serif;
 	font-size: 27px;
 }
