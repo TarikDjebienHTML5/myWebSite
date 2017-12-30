@@ -21,10 +21,14 @@
 
 @font-face
 {
-	font-family: 'AlexBrush';
-	src: url("../polices/AlexBrush-Regular.ttf") format('truetype');
-	font-weight: normal;
-	font-style: normal;
+	font-family: 'DobkinPlain';
+    src: url("../polices/DobkinPlain-webfont.eot");
+    src: url("../polices/DobkinPlain-webfont?#iefix") format('embedded-opentype'),
+    	 url("../polices/DobkinPlain-webfont.woff") format('woff'),
+    	 url("../polices/DobkinPlain-webfont.ttf") format('truetype'),
+    	 url("../polices/DobkinPlain-webfont.svg#DobkinPlain") format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
 /******** Definition des animations CSS3 */
