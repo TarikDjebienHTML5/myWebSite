@@ -22,7 +22,7 @@
 @font-face
 {
 	font-family: 'AlexBrush';
-	src: url("../polices/AlexBrush-Regular.ttf");
+	src: url("../polices/AlexBrush-Regular.ttf") format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
