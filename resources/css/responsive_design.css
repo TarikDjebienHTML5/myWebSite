@@ -55,6 +55,10 @@
 		background-repeat: repeat-x;
 		animation: animatedBackground 4s linear infinite;
 	}
+
+	article#myEmployment div#devopsPrezi iframe {
+	    width: 99%;
+	}
 }
 
 /* Landscape phones and down */
