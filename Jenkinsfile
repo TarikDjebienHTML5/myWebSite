@@ -17,7 +17,7 @@ node("master"){
     stage('Deploy'){
         withAWS(credentials:'aws', endpointUrl: 'http://tarikdjebien.com.s3-website.eu-west-2.amazonaws.com', region: 'EU (London)') {
             //TODO https://github.com/jenkinsci/pipeline-aws-plugin
-            s3Upload(file : "*", bucket : 'tarikdjebien.com', path : "${workspace}")
+            s3Upload(file : "${workspace}/**", bucket : 'tarikdjebien.com', path : "/")
         }
     }
 }
