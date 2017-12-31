@@ -24,5 +24,20 @@ section#mainSection article#mySkills blockquote
 	display: inline-block;
 	width: 95%;
 	font-family: DobkinPlain, sans-serif;
+	padding: 3%;
+}
 
+section#mainSection article#mySkills blockquote p
+{
+	font-size: 170%;
+}
+
+section#mainSection article#mySkills blockquote p.lead
+{
+	font-size: 220%;
+}
+
+section#mainSection article#mySkills blockquote small
+{
+	font-size: 150%;
 }
