@@ -59,13 +59,13 @@ section#mainSection article#myInterests section#myAI
 section#mainSection article#myInterests section#myAI input#visitorInput, textarea#elizaDisplay, button#sendToAI
 {
 	width: 92%;
-	background-color: rgba(0,0,0,0.75);
 	margin-left:1%;
 }
 
 section#mainSection article#myInterests section#myAI input#visitorInput, textarea#elizaDisplay
 {
 	color: #00FF00;
+	background-color: rgba(0,0,0,0.75);
 }
 
 section#mainSection article#myInterests section#myAI input#visitorInput::placeholder, textarea#elizaDisplay::placeholder
