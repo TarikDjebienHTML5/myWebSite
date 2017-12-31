@@ -30,3 +30,45 @@ section#mainSection article#myInterests h3
 	color: black;
 	text-shadow: 1px 2px 1.4px rgba(0,0,0,0.6);
 }
+
+section#mainSection article#myInterests legend, label
+{
+	text-align: center;
+	font-family: Dayrom, sans-serif;
+	font-size: 27px;
+	color: white;
+}
+
+section#mainSection article#myInterests legend
+{
+	text-shadow: 45px -38px 4px rgba(0,0,0,0.6);
+}
+
+section#mainSection article#myInterests section#myAI
+{
+	background: url("../../img/artificial_intelligence.jpg") top no-repeat fixed;
+	background-position: 0px 0px;
+        background-repeat: repeat-x;
+    	animation: animatedBackground 15s linear alternate infinite;
+        -ms-animation: animatedBackground 15s linear alternate infinite;
+        -moz-animation: animatedBackground 15s linear alternate infinite;
+        -webkit-animation: animatedBackground 15s linear alternate infinite;
+    color: white;
+}
+
+section#mainSection article#myInterests section#myAI input#visitorInput, textarea#elizaDisplay, button#sendToAI
+{
+	width: 92%;
+	background-color: rgba(0,0,0,0.75);
+	margin-left:1%;
+}
+
+section#mainSection article#myInterests section#myAI input#visitorInput, textarea#elizaDisplay
+{
+	color: #00FF00;
+}
+
+section#mainSection article#myInterests section#myAI input#visitorInput::placeholder, textarea#elizaDisplay::placeholder
+{
+	color: #00FF00;
+}
