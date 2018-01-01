@@ -21,7 +21,6 @@
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 
-
 	<!-- BootStrap CSS with Responsive Design -->
 	<link type="text/css" href="resources/bootstrap/css/bootstrap.css" rel="stylesheet" media="screen" />
 	<link type="text/css" href="resources/bootstrap/css/bootstrap-responsive.css" rel="stylesheet" media="screen" />
@@ -42,6 +41,7 @@
         <link type="text/css" href="/resources/css/ie/mywebsite_ie.css" rel="stylesheet" media="screen" />
     <![endif]-->
 
+    <!-- Website favicon in browser tab -->
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <!--[if IE]><link rel="shortcut icon" type="" href="favicon.ico" /><![endif]-->
 
@@ -162,26 +162,24 @@
 				<div id="qrcodeImg"/>
 
 			</article>
-		</section>
+            <section id="musicPlayerComponentWrapper" class="row-fluid">
+                <!-- Music player component -->
+                <section id="musicPlayerComponent">
+                    <div id="divPlayer">
+                        <h3>Audio player</h3>
 
-        <section id="musicPlayerComponentWrapper" class="row-fluid">
-            <!-- Music player component -->
-            <section id="musicPlayerComponent">
-                <div id="divPlayer">
-                    <h3>Audio player</h3>
+                        <audio id="audioPlayer" ontimeupdate="music.update(this)" autoplay>
+                            <source src="resources/audio/tracks/Chrono_Trigger.mp3" />
+                            Your browser does not support the audio element.
+                        </audio>
 
-                    <audio id="audioPlayer" ontimeupdate="music.update(this)" autoplay>
-                        <source src="resources/audio/tracks/Chrono_Trigger.mp3" />
-                        Your browser does not support the audio element.
-                    </audio>
-
-                    <div>
-                        <div id="progressBarControl" class="progress progress-striped active" onclick="music.clickProgress('audioPlayer', this, event)">
-                            <div id="progressBar" class="bar" onclick="music.clickProgress('audioPlayer', this, event)">0%</div>
+                        <div>
+                            <div id="progressBarControl" class="progress progress-striped active" onclick="music.clickProgress('audioPlayer', this, event)">
+                                <div id="progressBar" class="bar" onclick="music.clickProgress('audioPlayer', this, event)">0%</div>
+                            </div>
+                            <span id="progressTime">0:00</span>
                         </div>
-                        <span id="progressTime">0:00</span>
-                    </div>
-                    <div class="btn-toolbar auto">
+                        <div class="btn-toolbar auto">
 								<span class="btn-group">
 									<button id="playButton" class="btn btn-default" onclick="music.play('audioPlayer', this)">
 										<i class="icon-play"></i>
@@ -196,18 +194,29 @@
 										<i class="icon-volume-up"></i>
 									</button>
 								</span>
-                        <span class="volume"> <a id="stick1" class="stick1" /> <a id="stick2" class="stick2" /> <a id="stick3" class="stick3" /> <a id="stick4" class="stick4" /> <a
-                                id="stick5" class="stick5" /> <a id="stick6" class="stick6" /> <a id="stick7" class="stick7" /> <a id="stick8" class="stick8" /> <a id="stick9" class="stick9" /> <a id="stick10"
-                                                                                                                                                                                                     class="stick10" />
-								</span>
+                            <span class="volume">
+                                <a id="stick1" class="stick1" />
+                                <a id="stick2" class="stick2" />
+                                <a id="stick3" class="stick3" />
+                                <a id="stick4" class="stick4" />
+                                <a id="stick5" class="stick5" />
+                                <a id="stick6" class="stick6" />
+                                <a id="stick7" class="stick7" />
+                                <a id="stick8" class="stick8" />
+                                <a id="stick9" class="stick9" />
+                                <a id="stick10" class="stick10" />
+                            </span>
+                        </div>
                     </div>
-                </div>
+                </section>
+                <!-- /Music player component -->
+                <button id="displayButton" class="btn btn-default">
+                    <i class="icon-resize-small"></i>
+                </button>
             </section>
-            <!-- /Music player component -->
-            <button id="displayButton" class="btn btn-default">
-                <i class="icon-resize-small"></i>
-            </button>
-        </section>
+		</section>
+
+
 		<!-- /main section container -->
 		
 		<!-- FOOTER -->

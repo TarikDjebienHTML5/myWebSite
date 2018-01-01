@@ -21,7 +21,6 @@
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 
-
 	<!-- BootStrap CSS with Responsive Design -->
 	<link type="text/css" href="resources/bootstrap/css/bootstrap.css" rel="stylesheet" media="screen" />
 	<link type="text/css" href="resources/bootstrap/css/bootstrap-responsive.css" rel="stylesheet" media="screen" />
@@ -42,6 +41,7 @@
         <link type="text/css" href="/resources/css/ie/mywebsite_ie.css" rel="stylesheet" media="screen" />
     <![endif]-->
 
+    <!-- Website favicon in browser tab -->
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <!--[if IE]><link rel="shortcut icon" type="" href="favicon.ico" /><![endif]-->
 
@@ -118,10 +118,12 @@
 
 		<!-- Main section container page -->
 		<section id="mainSection" class="container-fluid">
-			<article id="mySkills">
+			<article id="mySkills" class="container-fluid">
+
                 <!-- Google + badge -->
                 <script src="https://apis.google.com/js/platform.js" async defer>{lang: 'en-GB'}</script>
                 <div class="g-person" data-width="267" data-href="https://plus.google.com/u/0/110384201404134258601" data-theme="dark" data-rel="author"></div>
+
                 <blockquote class="pull-right">
                     <p class="lead">"Success is not final, failure is not fatal: it is the courage to continue that counts"</p>
                     <small>Winston Churchill<cite title="Source Title"></cite></small>
@@ -162,54 +164,97 @@
                     <p class="lead">"If you do what you've always done, You'll get what you've always gotten"</p>
                     <small>Anthony Robbins<cite title="Source Title"></cite></small>
                 </blockquote>
-                <img id="myLife_icon" src="resources/img/life.jpg" alt="Life icon" class="img-polaroid" />
+
+                <img id="myLife_icon"
+                     src="resources/img/life.jpg"
+                     alt="Life icon"
+                     class="img-polaroid" />
+
+                <section id="videoPlayerComponentWrapper" class="row-fluid">
+                    <div class="divYoutubePlayer">
+                        <iframe src="https://www.youtube.com/embed/x2OenRyN8_E?rel=0&amp;showinfo=0"
+                                width="100%"
+                                height="100%"
+                                frameborder="0"
+                                gesture="media"
+                                allow="encrypted-media"
+                                allowfullscreen class="span4">
+                        </iframe>
+                        <iframe src="https://www.youtube.com/embed/Tr7o2I0BKAE?rel=0&amp;showinfo=0"
+                                width="100%"
+                                height="100%"
+                                frameborder="0"
+                                gesture="media"
+                                allow="encrypted-media"
+                                allowfullscreen class="span4">
+                        </iframe>
+                        <iframe src="https://www.youtube.com/embed/ma--dkgFrSA?rel=0&amp;showinfo=0"
+                                width="100%"
+                                height="100%"
+                                frameborder="0"
+                                gesture="media"
+                                allow="encrypted-media"
+                                allowfullscreen class="span4">
+                        </iframe>
+                    </div>
+                </section>
             </article>
-        </section>
+            <section id="musicPlayerComponentWrapper" class="row-fluid">
+                <!-- Music player component -->
+                <section id="musicPlayerComponent">
+                    <div id="divPlayer">
+                        <h3>Audio player</h3>
 
-        <section id="musicPlayerComponentWrapper" class="row-fluid">
-            <!-- Music player component -->
-            <section id="musicPlayerComponent">
-                <div id="divPlayer">
-                    <h3>Audio player</h3>
+                        <audio id="audioPlayer" ontimeupdate="music.update(this)">
+                            <source src="resources/audio/tracks/Final_Fantasy.mp3" />
+                            Your browser does not support the audio element.
+                        </audio>
 
-                    <audio id="audioPlayer" ontimeupdate="music.update(this)" autoplay>
-                        <source src="resources/audio/tracks/Final_Fantasy.mp3" />
-                        Your browser does not support the audio element.
-                    </audio>
-
-                    <div>
-                        <div id="progressBarControl" class="progress progress-striped active" onclick="music.clickProgress('audioPlayer', this, event)">
-                            <div id="progressBar" class="bar" onclick="music.clickProgress('audioPlayer', this, event)">0%</div>
+                        <div>
+                            <div id="progressBarControl" class="progress progress-striped active" onclick="music.clickProgress('audioPlayer', this, event)">
+                                <div id="progressBar" class="bar" onclick="music.clickProgress('audioPlayer', this, event)">0%</div>
+                            </div>
+                            <span id="progressTime">0:00</span>
                         </div>
-                        <span id="progressTime">0:00</span>
+
+                        <div class="btn-toolbar auto">
+                        <span class="btn-group">
+                            <button id="playButton" class="btn btn-default" onclick="music.play('audioPlayer', this)">
+                                <i class="icon-play"></i>
+                            </button>
+                            <button id="stopButton" class="btn btn-default" onclick="music.resume('audioPlayer')">
+                                <i class="icon-stop"></i>
+                            </button>
+                            <button id="increaseVolumeButton" class="btn btn-default" onclick="music.volumeDec('audioPlayer')">
+                                <i class="icon-volume-down"></i>
+                            </button>
+                            <button id="decreaseVolumeButton" class="btn btn-default" onclick="music.volumeInc('audioPlayer')">
+                                <i class="icon-volume-up"></i>
+                            </button>
+                        </span>
+                            <span class="volume">
+                            <a id="stick1" class="stick1" />
+                            <a id="stick2" class="stick2" />
+                            <a id="stick3" class="stick3" />
+                            <a id="stick4" class="stick4" />
+                            <a id="stick5" class="stick5" />
+                            <a id="stick6" class="stick6" />
+                            <a id="stick7" class="stick7" />
+                            <a id="stick8" class="stick8" />
+                            <a id="stick9" class="stick9" />
+                            <a id="stick10" class="stick10" />
+                        </span>
+                        </div>
                     </div>
-                    <div class="btn-toolbar auto">
-								<span class="btn-group">
-									<button id="playButton" class="btn btn-default" onclick="music.play('audioPlayer', this)">
-										<i class="icon-play"></i>
-									</button>
-									<button id="stopButton" class="btn btn-default" onclick="music.resume('audioPlayer')">
-										<i class="icon-stop"></i>
-									</button>
-									<button id="increaseVolumeButton" class="btn btn-default" onclick="music.volumeDec('audioPlayer')">
-										<i class="icon-volume-down"></i>
-									</button>
-									<button id="decreaseVolumeButton" class="btn btn-default" onclick="music.volumeInc('audioPlayer')">
-										<i class="icon-volume-up"></i>
-									</button>
-								</span>
-                        <span class="volume"> <a id="stick1" class="stick1" /> <a id="stick2" class="stick2" /> <a id="stick3" class="stick3" /> <a id="stick4" class="stick4" /> <a
-                                id="stick5" class="stick5" /> <a id="stick6" class="stick6" /> <a id="stick7" class="stick7" /> <a id="stick8" class="stick8" /> <a id="stick9" class="stick9" /> <a id="stick10"
-                                                                                                                                                                                                     class="stick10" />
-								</span>
-                    </div>
-                </div>
+                </section>
+                <!-- /Music player component -->
+                <button id="displayButton" class="btn btn-default">
+                    <i class="icon-resize-small"></i>
+                </button>
             </section>
-            <!-- /Music player component -->
-            <button id="displayButton" class="btn btn-default">
-                <i class="icon-resize-small"></i>
-            </button>
         </section>
+
+
 		<!-- /main section container -->
 		
 		<!-- FOOTER -->
@@ -247,6 +292,7 @@
 	<script type="text/javascript" src="resources/js/clock.js" charset="utf-8"></script>
 	<script type="text/javascript" src="resources/js/mywebsite.js" charset="utf-8"></script>
     <script type="text/javascript" src="resources/js/musicplayer.js" charset="utf-8"></script>
+
 </body>
 
 
