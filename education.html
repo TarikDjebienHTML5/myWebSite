@@ -119,7 +119,7 @@
 		<!-- Main section container page -->
 		<section id="mainSection" class="container-fluid">
 			<article id="myEducation">
-				<img src="resources/img/icon/education_icon.png" alt="Education icon" class="thumbnail" />
+				<img id="educationIcon" src="resources/img/icon/education_icon.png" alt="Education icon" class="thumbnail" />
 
                 <div class="row-fluid">
                     <iframe src="http://githubbadge.appspot.com/tarikdjebien"
@@ -135,25 +135,15 @@
                    aria-label="Follow @tarikdjebien on GitHub">Follow @tarikdjebien</a>
                 </div>
 
-				<div id="diagram" class="row-fluid"></div>
-
 				<section id="videoPlayerComponentWrapper" class="row-fluid">
                     <div class="divYoutubePlayer">
-                        <iframe src="https://www.youtube-nocookie.com/embed/_Xl7FPmG_6w"
-                                width="100%"
-                                height="100%"
-                                frameborder="0"
-                                gesture="media"
-                                allow="encrypted-media"
-                                class="span4" allowfullscreen>
-                        </iframe>
                         <iframe src="https://www.youtube-nocookie.com/embed/9xSgtDSumDw"
                                 width="100%"
                                 height="100%"
                                 frameborder="0"
                                 gesture="media"
                                 allow="encrypted-media"
-                                class="span4" allowfullscreen>
+                                class="span6" allowfullscreen>
                         </iframe>
                         <iframe src="https://www.youtube-nocookie.com/embed/I5dUx-l-HmE"
                                 width="100%"
@@ -161,11 +151,25 @@
                                 frameborder="0"
                                 gesture="media"
                                 allow="encrypted-media"
-                                class="span4" allowfullscreen>
+                                class="span6" allowfullscreen>
                         </iframe>
                     </div>
                 </section>
-			</article>
+
+                <section id="certification" class="row-fluid">
+                    <a href="https://www.youracclaim.com/badges/0dafc900-ce65-4fdd-9efa-b8417942d964/public_url">
+                        <img src="resources/img/icon/ocp_java_6_programmer_icon.png" class="span3" />
+                    </a>
+                    <img src="resources/img/pivotal_spring_tarik_djebien_certificate.jpg" class="span3" />
+                    <img src="https://api.accredible.com/v1/frontend/credential_website_embed_image/certificate/10409801" class="span3"/>
+                    <img src="https://api.accredible.com/v1/frontend/credential_website_embed_image/certificate/11642003" class="span3" />
+                </section>
+
+                <!-- Hidden Architecture :)
+                <div id="diagram" class="row-fluid"></div>
+                -->
+
+            </article>
 		</section>
 		<!-- /main section container -->
 		

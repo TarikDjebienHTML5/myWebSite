@@ -7,7 +7,7 @@
  * @Browsers : Firefox, Safari, Chrome
  */
 
-section#mainSection article#myEducation img
+section#mainSection article#myEducation img#educationIcon
 {
 	-webkit-border-radius: 50%;
 	border-radius: 50%;
