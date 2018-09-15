@@ -56,7 +56,7 @@
 		animation: animatedBackground 4s linear infinite;
 	}
 
-	article#myEmployment div#devopsPrezi iframe {
+	article#myEmployment div#devopsPrezi iframe, article#myEmployment div#aiPrezi iframe {
 	    width: 99%;
 	}
 }
