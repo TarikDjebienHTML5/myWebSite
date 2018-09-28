@@ -2,6 +2,7 @@
  * My Web Site Javascript function
  */
 $(document).ready(function() {
+    $("#crisiscore").hide();
 	$("#sendEmail").click(function(){
 	    if($("#qrcodeForm #subject").val() && $("#qrcodeForm #body").val()){
 	        $("#qrcodeImg img").remove();
@@ -12,6 +13,7 @@ $(document).ready(function() {
             			render: 'image',
             			text: message
             		});
+            $("#crisiscore").show();
 	    }
 	});
 });

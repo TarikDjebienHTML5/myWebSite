@@ -120,7 +120,6 @@
 		<section id="mainSection" class="container-fluid">
 			<article id="myProfil">
 				<img id="myPhoto" src="resources/img/icon/contact_icon.jpg" alt="Tarik Photo" class="thumbnail" />
-
 				<form id="qrcodeForm" class="form-horizontal">
 
                     <fieldset>
@@ -158,18 +157,29 @@
 							</button>
 						</div>
 					</div>
+                        <div id="crisiscore" class="control-group">
+                            <iframe src="https://www.youtube.com/embed/Een-OcxHZyA?rel=0&amp;showinfo=0"
+                                    width="100%"
+                                    height="100%"
+                                    frameborder="0"
+                                    class="span4 controls"
+                                    allow="autoplay"
+                                    allowfullscreen>
+                            </iframe>
+                        </div>
                     </fieldset>
 				</form>
 				<div id="qrcodeImg"/>
 
 			</article>
+
             <section id="musicPlayerComponentWrapper" class="row-fluid">
                 <!-- Music player component -->
                 <section id="musicPlayerComponent">
                     <div id="divPlayer">
                         <h3>Audio player</h3>
 
-                        <audio id="audioPlayer" ontimeupdate="music.update(this)" autoplay>
+                        <audio id="audioPlayer" ontimeupdate="music.update(this)">
                             <source src="resources/audio/tracks/Chrono_Trigger.mp3" />
                             Your browser does not support the audio element.
                         </audio>
