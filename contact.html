@@ -147,6 +147,7 @@
 						<label class="control-label" for="body">Message :</label>
 						<div class="controls">
 							<textarea id="body" rows="6" ng-model="body" placeholder="Special Thanks to {{firstname}} {{lastname}} ..."></textarea>
+                            <div class="g-recaptcha" data-sitekey="6LdCqXIUAAAAAKdm-YhXV2-rr1Un96GkXixFPvvX"></div>
                             <span class="help-block">Prepare your Qrcode mobile app and</span>
 						</div>
 					</div>
@@ -243,6 +244,9 @@
 
 	<!-- qrcode -->
 	<script type="text/javascript" src="resources/js/qrcode/js/jquery.qrcode.min.js"></script>
+
+	<!-- Google recaptcha -->
+	<script src='https://www.google.com/recaptcha/api.js'></script>
 
 	<!-- BootStrap -->
 	<script type="text/javascript" src="resources/bootstrap/js/bootstrap.min.js"></script>
