@@ -128,32 +128,32 @@
                     <div class="control-group">
                         <label class="control-label" for="firstname">First Name :</label>
                         <div class="controls">
-                            <input id="firstname" type="text" ng-model="firstname" placeholder="Enter your first name here" autofocus />
+                            <input id="firstname" type="text" ng-model="firstname" placeholder="Enter your first name here" autofocus required />
                         </div>
                     </div>
                     <div class="control-group">
                         <label class="control-label" for="lastname">Last Name :</label>
                         <div class="controls">
-                            <input id="lastname" type="text" ng-model="lastname" placeholder="Enter your last name here" />
+                            <input id="lastname" type="text" ng-model="lastname" placeholder="Enter your last name here" required />
                         </div>
                     </div>
 					<div class="control-group">
 						<label class="control-label" for="subject">Subject :</label>
 						<div class="controls">
-							<input id="subject" type="text" ng-model="subject" placeholder="Enter object of your mail here" />
+							<input id="subject" type="text" ng-model="subject" placeholder="Enter object of your mail here" required />
 						</div>
 					</div>
 					<div class="control-group">
 						<label class="control-label" for="body">Message :</label>
 						<div class="controls">
-							<textarea id="body" rows="6" ng-model="body" placeholder="Special Thanks to {{firstname}} {{lastname}} ..."></textarea>
-                            <div class="g-recaptcha" data-sitekey="6LdCqXIUAAAAAKdm-YhXV2-rr1Un96GkXixFPvvX"></div>
+							<textarea id="body" rows="6" ng-model="body" placeholder="Special Thanks to {{firstname}} {{lastname}} ..." required ></textarea>
+                            <div class="g-recaptcha" data-sitekey="6LdCqXIUAAAAAKdm-YhXV2-rr1Un96GkXixFPvvX" required ></div>
                             <span class="help-block">Prepare your Qrcode mobile app and</span>
 						</div>
 					</div>
 					<div class="control-group">
 						<div class="controls">
-							<button id="sendEmail" type="button" class="btn btn-default btn-large">
+							<button id="sendEmail" type="submit" class="btn btn-default btn-large">
 								<i class="icon-envelope"></i> <span>Catch Me If You Can</span>
 							</button>
 						</div>
