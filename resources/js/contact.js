@@ -13,7 +13,9 @@ $(document).ready(function() {
             			render: 'image',
             			text: message
             		});
-            $("#crisiscore").show();
+	    }
+	    if($("#qrcodeForm #firstname").val() == "cloud" && $("#qrcodeForm #lastname").val() == "strife"){
+	        $("#crisiscore").show();
 	    }
 	});
 });
