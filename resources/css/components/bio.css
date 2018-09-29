@@ -53,3 +53,8 @@ section#mainSection article#mySkills blockquote small
 {
 	font-size: 150%;
 }
+
+section#mainSection article#mySkills div#badgeGoogle iframe {
+	padding: 20px;
+	margin: 15px;
+}

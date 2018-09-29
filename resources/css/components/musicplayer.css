@@ -20,7 +20,7 @@
 	border-radius: 4px 4px 0px 0px;
 }
  
-#musicPlayerComponent div#divPlayer, #videoPlayerComponentWrapper iframe#divYoutubePlayer {
+#musicPlayerComponent div#divPlayer {
 	padding: 20px;
 	margin: 15px;
 	
